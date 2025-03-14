@@ -17,6 +17,7 @@
   /* colors */
   --color-gold-dark: var(--gold-dark);
   --color-gold-light: var(--gold-light);
+  --color-gold-lighter: var(--gold-lighter);
   --color-gold-linear: var(--gold-linear);
 
   --color-sidebar-ring: var(--sidebar-ring);
@@ -55,6 +56,9 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  /* breakpoints */
+  --breakpoint-3xl: 1600px;
 }
 
 :root {
@@ -113,11 +117,23 @@
   padding-inline: 1rem;
   margin-inline: auto;
 
-  @variant lg {
+  @variant xl {
     max-width: 1170px;
+    padding-inline: 0;
   }
 
-  @variant xl {
+  @variant 2xl {
     max-width: 1280px;
+  }
+
+  @variant 3xl {
+    max-width: 1600px;
+  }
+}
+
+@layer utilities {
+  .linear_gradient {
+    background: linear-gradient(#e1c06e, #e1c06e) padding-box,
+      linear-gradient(180deg, #c1842d 0%, #ecc974 100%) border-box;
   }
 }
