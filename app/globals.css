@@ -136,4 +136,9 @@
     background: linear-gradient(#e1c06e, #e1c06e) padding-box,
       linear-gradient(180deg, #c1842d 0%, #ecc974 100%) border-box;
   }
+  .linear_gradient_hero {
+    background: linear-gradient(rgba(34, 36, 45, 1), rgba(34, 36, 45, 1))
+        padding-box,
+      linear-gradient(95.12deg, #db5095 7.77%, #1945e8 95.93%) border-box;
+  }
 }
