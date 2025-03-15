@@ -1,10 +1,11 @@
+import CategorySection from "@/components/sections/CategorySection";
 import HeroSection from "@/components/sections/HeroSection";
 import SearchBox from "@/components/ui/SearchBox";
 
 const Home = () => {
   return (
     <>
-      <div className="w-full min-h-screen h-auto max-h-[1300px] relative bg-[url('/Hero.jpg')] bg-no-repeat bg-cover ">
+      <div className="w-full min-h-screen h-auto relative bg-[url('/Hero.jpg')] bg-no-repeat bg-contain ">
         <HeroSection />
         <div className="pt-[9.2rem] pb-[4.56rem]">
           <SearchBox
@@ -13,6 +14,8 @@ const Home = () => {
             placeholder="Search by product/treatment"
           />
         </div>
+
+        <CategorySection />
       </div>
 
       <p>

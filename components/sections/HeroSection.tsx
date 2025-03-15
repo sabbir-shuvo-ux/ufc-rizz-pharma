@@ -8,7 +8,8 @@ const HeroSection = () => {
         <SectionTitle
           beforeText="Prescription treatments for your"
           gradientText="health goals"
-          className="text-[5rem] leading-24"
+          className="text-[5rem] leading-24 text-left"
+          gradientClassName="block"
         />
 
         <Button variant={"secondary"} size={"secondary"}>
