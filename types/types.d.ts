@@ -7,3 +7,8 @@ type CategoryItemType = {
   imgOverlayWidth?: number;
   label: string;
 };
+
+type CategoriesDataType = {
+  id: string;
+  label: string;
+};

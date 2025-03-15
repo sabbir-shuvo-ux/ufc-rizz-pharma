@@ -1,5 +1,6 @@
 import CategorySection from "@/components/sections/CategorySection";
 import HeroSection from "@/components/sections/HeroSection";
+import ProductsSection from "@/components/sections/product-section/ProductsSection";
 import SupportSection from "@/components/sections/SupportSection";
 import SearchBox from "@/components/ui/SearchBox";
 
@@ -20,6 +21,8 @@ const Home = () => {
         <CategorySection />
         <SupportSection />
       </div>
+      {/* Product Section */}
+      <ProductsSection />
     </>
   );
 };
