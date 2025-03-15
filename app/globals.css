@@ -141,4 +141,7 @@
         padding-box,
       linear-gradient(95.12deg, #db5095 7.77%, #1945e8 95.93%) border-box;
   }
+  .bg_size_full {
+    background-size: 100% 100%;
+  }
 }

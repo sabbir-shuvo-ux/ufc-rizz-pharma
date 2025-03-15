@@ -5,7 +5,7 @@ import SearchBox from "@/components/ui/SearchBox";
 const Home = () => {
   return (
     <>
-      <div className="w-full min-h-screen h-auto relative bg-[url('/Hero.jpg')] bg-no-repeat bg-contain ">
+      <div className="w-full min-h-screen h-full relative bg-[url('/Hero1.jpg')] bg-no-repeat bg_size_full">
         <HeroSection />
         <div className="pt-[9.2rem] pb-[4.56rem]">
           <SearchBox
@@ -14,7 +14,8 @@ const Home = () => {
             placeholder="Search by product/treatment"
           />
         </div>
-
+      </div>
+      <div className="bg-[url('/category-cover.jpg')] w-full min-h-screen h-full relative bg-no-repeat bg_size_full">
         <CategorySection />
       </div>
 
