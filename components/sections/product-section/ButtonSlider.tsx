@@ -7,13 +7,14 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { useProductFilterContext } from "@/context/ProductFilterContext";
+import { cn } from "@/lib/utils";
 
 type Props = {
   data: CategoriesDataType[];
 };
 
 const ButtonSlider = ({ data }: Props) => {
-  const { handleProductData } = useProductFilterContext();
+  const { handleProductData, selectedCategory } = useProductFilterContext();
 
   return (
     <Carousel className="w-full max-w-[calc(100%_-_86px)]">
@@ -25,7 +26,10 @@ const ButtonSlider = ({ data }: Props) => {
               onClick={() => handleProductData(item.id)}
               variant={"outline"}
               size={"secondary"}
-              className="py-5 px-[32px]"
+              className={cn(
+                "py-5 px-[32px]",
+                selectedCategory === item.id ? "bg-[#E1C06E] text-black" : null
+              )}
             >
               {item.label}
             </Button>

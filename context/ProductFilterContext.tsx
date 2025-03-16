@@ -7,6 +7,7 @@ type ContextType = {
   handleProductData: (id: string) => void;
   setOriginalData: (data: ProductDataType[]) => void;
   loading: boolean;
+  selectedCategory: string;
 };
 
 const ProductFilterContext = createContext<ContextType | undefined>(undefined);
@@ -24,6 +25,7 @@ const ProductFilterContextProvider: React.FC<{ children: React.ReactNode }> = ({
   );
   // loading state
   const [loading, setLoading] = useState<boolean>(true);
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
   // update productData when originalData is set
   useEffect(() => {
@@ -36,10 +38,9 @@ const ProductFilterContextProvider: React.FC<{ children: React.ReactNode }> = ({
   // handle product filter
   const handleProductData = (id: string) => {
     if (!originalData) return;
+    setLoading(true);
+    setSelectedCategory(id); // Update the selected category
 
-    setLoading(true); // Set loading to true while filtering
-
-    // dealy for loading state
     setTimeout(() => {
       if (id === "all") {
         setProductData(originalData);
@@ -55,7 +56,13 @@ const ProductFilterContextProvider: React.FC<{ children: React.ReactNode }> = ({
 
   return (
     <ProductFilterContext.Provider
-      value={{ productData, handleProductData, setOriginalData, loading }}
+      value={{
+        productData,
+        handleProductData,
+        setOriginalData,
+        loading,
+        selectedCategory,
+      }}
     >
       {children}
     </ProductFilterContext.Provider>
