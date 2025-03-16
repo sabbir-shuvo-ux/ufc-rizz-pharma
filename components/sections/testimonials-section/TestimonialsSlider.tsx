@@ -5,6 +5,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { CarouselDots } from "@/components/ui/CarouselDots";
 import { ratingResult } from "@/lib/ratingResult";
 import Image from "next/image";
 
@@ -21,7 +22,7 @@ const TestimonialsSlider = () => {
     >
       <CarouselContent>
         {Array.from({ length: 8 }).map((_, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4">
             <div className="rounded-[15.569px] p-8 bg-[url('/Dissolve_Noise_Texture.png')] bg-no-repeat min-h-[440px] h-full w-full">
               <Image
                 src={"/inverted-comma.svg"}
@@ -76,8 +77,9 @@ const TestimonialsSlider = () => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      {/* <CarouselPrevious />
+      <CarouselNext /> */}
+      <CarouselDots className="mt-[50px]" />
     </Carousel>
   );
 };

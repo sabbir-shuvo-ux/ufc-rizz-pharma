@@ -11,10 +11,9 @@ const ReviewSection = () => {
           beforeText="Patients Have To Say"
           className="mb-[45px]"
         />
-
-        <div className="">
-          <TestimonialsSlider />
-        </div>
+      </div>
+      <div className="max-w-screen">
+        <TestimonialsSlider />
       </div>
     </section>
   );
