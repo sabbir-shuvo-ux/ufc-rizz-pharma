@@ -5,6 +5,7 @@ import SupportSection from "@/components/sections/SupportSection";
 import SearchBox from "@/components/ui/SearchBox";
 
 const Home = () => {
+  console.log("page reload");
   return (
     <>
       <div className="w-full min-h-screen h-full relative bg-[url('/Hero1.jpg')] bg-no-repeat bg_size_full">

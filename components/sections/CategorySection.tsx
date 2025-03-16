@@ -1,7 +1,5 @@
-import Image from "next/image";
-import SectionTitle from "../ui/SectionTitle";
-import Link from "next/link";
 import CategoryCard from "../CategoryCard";
+import SectionTitle from "../ui/SectionTitle";
 
 type CategoryDataType = {
   className?: string;
