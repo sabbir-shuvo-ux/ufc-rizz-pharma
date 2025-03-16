@@ -1,0 +1,38 @@
+ [
+  {
+    "id": "all",
+    "label": "All"
+  },
+  {
+    "id": "Best_Selling_Products_02",
+    "label": "Best Selling Products"
+  },
+  {
+    "id": "Weight_Loss_03",
+    "label": "Weight Loss"
+  },
+  {
+    "id": "beauty_and_hair_loss_04",
+    "label": "Beauty And Hair Loss"
+  },
+  {
+    "id": "testosterone_hrt_05",
+    "label": "Testosterone/HRT"
+  },
+  {
+    "id": "sexual_health_06",
+    "label": "Sexual Health"
+  },
+  {
+    "id": "Immune_Support_82",
+    "label": "Immune Support"
+  },
+  {
+    "id": "Health_01",
+    "label": "Health"
+  },
+  {
+    "id": "Fitness_02",
+    "label": "Fitness"
+  }
+]

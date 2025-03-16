@@ -1,0 +1,324 @@
+ [
+  {
+    "id": "1",
+    "img": "/Retarutide.png",
+    "label": "Retarutide",
+    "priceText": "$39.99/per month",
+    "badgeType": "LIGHT",
+    "categoryId": "Weight_Loss_03"
+  },
+  {
+    "id": "2",
+    "img": "/glow.png",
+    "label": "Lyopholized Glow (GHK-CU/ BPC-157/TB-500)",
+    "priceText": "$39.99/per month",
+    "badgeType": "LIGHT",
+    "categoryId": "Best_Selling_Products_02"
+  },
+  {
+    "id": "3",
+    "img": "/compounded-sermorelin.png",
+    "label": "Compounded Sermorelin 15mg",
+    "priceText": "Starting at $179 Monthly + $45 Physician consult",
+    "badgeType": "DARK",
+    "categoryId": "beauty_and_hair_loss_04"
+  },
+  {
+    "id": "4",
+    "img": "/Ipamorelin.png",
+    "label": "2X CJC / Ipamorelin",
+    "priceText": "Starting at $149 Monthly + $45 Physician consult + $100 Lab Charge",
+    "categoryId": "Best_Selling_Products_02"
+  },
+  {
+    "id": "5",
+    "img": "/Lyopholized-Oxytocin.png",
+    "label": "Lyopholized Oxytocin",
+    "priceText": "$39.99/per month",
+    "categoryId": "beauty_and_hair_loss_04"
+  },
+  {
+    "id": "6",
+    "img": "/Finasteride.png",
+    "label": "Lyopholized Finasteride 1mg",
+    "priceText": "$39.99/per month",
+    "badgeType": "DARK",
+    "isImgBig": true,
+    "categoryId": "sexual_health_06"
+  },
+  {
+    "id": "7",
+    "img": "/Compounded-NAD.png",
+    "label": "Compounded NAD+ 1000 mg",
+    "priceText": "Starting at $179 Monthly + $45 Physician consult",
+    "categoryId": "Weight_Loss_03"
+  },
+  {
+    "id": "8",
+    "img": "/Lyopholized-PT.png",
+    "label": "Lyopholized PT- 141 10mg",
+    "priceText": "Starting at $149 Monthly + $45 Physician consult + $100 Lab Charge",
+    "badgeType": "DARK",
+    "categoryId": "testosterone_hrt_05"
+  },
+  {
+    "id": "9",
+    "img": "/glow.png",
+    "label": "Vitamin D Supplement",
+    "priceText": "$19.99/per bottle",
+    "badgeType": "DARK",
+    "categoryId": "Health_01"
+  },
+  {
+    "id": "10",
+    "img": "/glow.png",
+    "label": "Omega 3 Fish Oil",
+    "priceText": "$25.00/per bottle",
+    "categoryId": "Health_01"
+  },
+  {
+    "id": "11",
+    "img": "/glow.png",
+    "label": "Protein Shake",
+    "priceText": "$45.00/per pack",
+    "badgeType": "LIGHT",
+    "categoryId": "Fitness_02"
+  },
+  {
+    "id": "12",
+    "img": "/glow.png",
+    "label": "Whey Protein Powder",
+    "priceText": "$59.99/per pack",
+    "badgeType": "DARK",
+    "categoryId": "Fitness_02"
+  },
+  {
+    "id": "13",
+    "img": "/glow.png",
+    "label": "Energy Bar",
+    "priceText": "$2.99/each",
+    "categoryId": "testosterone_hrt_05"
+  },
+  {
+    "id": "14",
+    "img": "/glow.png",
+    "label": "Glucosamine Supplement",
+    "priceText": "$24.99/per bottle",
+    "badgeType": "LIGHT",
+    "categoryId": "Health_01"
+  },
+  {
+    "id": "15",
+    "img": "/glow.png",
+    "label": "Detox Tea",
+    "priceText": "$18.99/per pack",
+    "categoryId": "Weight_Loss_03"
+  },
+  {
+    "id": "16",
+    "img": "/glow.png",
+    "label": "Multivitamins",
+    "priceText": "$14.99/per bottle",
+    "badgeType": "DARK",
+    "categoryId": "Health_01"
+  },
+  {
+    "id": "17",
+    "img": "/glow.png",
+    "label": "Green Tea Supplement",
+    "priceText": "$12.99/per bottle",
+    "categoryId": "Weight_Loss_03"
+  },
+  {
+    "id": "18",
+    "img": "/glow.png",
+    "label": "Collagen Peptides",
+    "priceText": "$29.99/per bottle",
+    "badgeType": "LIGHT",
+    "categoryId": "beauty_and_hair_loss_04"
+  },
+  {
+    "id": "19",
+    "img": "/glow.png",
+    "label": "Biotin Supplement",
+    "priceText": "$14.99/per bottle",
+    "badgeType": "DARK",
+    "categoryId": "beauty_and_hair_loss_04"
+  },
+  {
+    "id": "20",
+    "img": "/glow.png",
+    "label": "Magnesium Supplement",
+    "priceText": "$19.99/per bottle",
+    "badgeType": "LIGHT",
+    "categoryId": "Best_Selling_Products_02"
+  },
+  {
+    "id": "21",
+    "img": "/glow.png",
+    "label": "Testosterone Booster",
+    "priceText": "$49.99/per bottle",
+    "badgeType": "DARK",
+    "categoryId": "testosterone_hrt_05"
+  },
+  {
+    "id": "22",
+    "img": "/glow.png",
+    "label": "Pre-Workout Supplement",
+    "priceText": "$39.99/per bottle",
+    "badgeType": "LIGHT",
+    "categoryId": "Fitness_02"
+  },
+  {
+    "id": "23",
+    "img": "/glow.png",
+    "label": "L-Carnitine Supplement",
+    "priceText": "$24.99/per bottle",
+    "badgeType": "DARK",
+    "categoryId": "Weight_Loss_03"
+  },
+  {
+    "id": "24",
+    "img": "/glow.png",
+    "label": "Creatine Monohydrate",
+    "priceText": "$29.99/per bottle",
+    "badgeType": "LIGHT",
+    "categoryId": "Fitness_02"
+  },
+  {
+    "id": "25",
+    "img": "/glow.png",
+    "label": "Vitamin C Supplement",
+    "priceText": "$14.99/per bottle",
+    "badgeType": "DARK",
+    "categoryId": "Best_Selling_Products_02"
+  },
+  {
+    "id": "26",
+    "img": "/glow.png",
+    "label": "Zinc Supplement",
+    "priceText": "$12.99/per bottle",
+    "badgeType": "LIGHT",
+    "categoryId": "beauty_and_hair_loss_04"
+  },
+  {
+    "id": "27",
+    "img": "/glow.png",
+    "label": "Ashwagandha Supplement",
+    "priceText": "$22.99/per bottle",
+    "badgeType": "DARK",
+    "categoryId": "testosterone_hrt_05"
+  },
+  {
+    "id": "28",
+    "img": "/glow.png",
+    "label": "BCAA Supplement",
+    "priceText": "$35.00/per bottle",
+    "badgeType": "LIGHT",
+    "categoryId": "Fitness_02"
+  },
+  {
+    "id": "29",
+    "img": "/glow.png",
+    "label": "Probiotic Supplement",
+    "priceText": "$19.99/per bottle",
+    "badgeType": "DARK",
+    "categoryId": "Health_01"
+  },
+  {
+    "id": "30",
+    "img": "/glow.png",
+    "label": "Fish Oil Supplement",
+    "priceText": "$29.99/per bottle",
+    "badgeType": "LIGHT",
+    "categoryId": "Health_01"
+  },
+  {
+    "id": "31",
+    "img": "/glow.png",
+    "label": "Glutamine Supplement",
+    "priceText": "$24.99/per bottle",
+    "badgeType": "DARK",
+    "categoryId": "Fitness_02"
+  },
+  {
+    "id": "32",
+    "img": "/glow.png",
+    "label": "L-Theanine Supplement",
+    "priceText": "$19.99/per bottle",
+    "badgeType": "LIGHT",
+    "categoryId": "sexual_health_06"
+  },
+  {
+    "id": "33",
+    "img": "/glow.png",
+    "label": "Melatonin Supplement",
+    "priceText": "$9.99/per bottle",
+    "badgeType": "DARK",
+    "categoryId": "sexual_health_06"
+  },
+  {
+    "id": "34",
+    "img": "/glow.png",
+    "label": "Vitamin C + Zinc",
+    "priceText": "$19.99/per bottle",
+    "badgeType": "LIGHT",
+    "categoryId": "Immune_Support_82"
+  },
+  {
+    "id": "35",
+    "img": "/glow.png",
+    "label": "Elderberry Supplement",
+    "priceText": "$24.99/per bottle",
+    "badgeType": "DARK",
+    "categoryId": "Immune_Support_82"
+  },
+  {
+    "id": "36",
+    "img": "/glow.png",
+    "label": "Turmeric + Curcumin",
+    "priceText": "$29.99/per bottle",
+    "badgeType": "LIGHT",
+    "categoryId": "Immune_Support_82"
+  },
+  {
+    "id": "37",
+    "img": "/glow.png",
+    "label": "Probiotic Immune Support",
+    "priceText": "$22.99/per bottle",
+    "badgeType": "DARK",
+    "categoryId": "Immune_Support_82"
+  },
+  {
+    "id": "38",
+    "img": "/glow.png",
+    "label": "Vitamin D3 + K2",
+    "priceText": "$19.99/per bottle",
+    "badgeType": "LIGHT",
+    "categoryId": "Immune_Support_82"
+  },
+  {
+    "id": "39",
+    "img": "/glow.png",
+    "label": "Garlic Supplement",
+    "priceText": "$14.99/per bottle",
+    "badgeType": "DARK",
+    "categoryId": "Immune_Support_82"
+  },
+  {
+    "id": "40",
+    "img": "/glow.png",
+    "label": "Ashwagandha Immunity Boost",
+    "priceText": "$18.99/per bottle",
+    "badgeType": "LIGHT",
+    "categoryId": "Immune_Support_82"
+  },
+  {
+    "id": "41",
+    "img": "/glow.png",
+    "label": "Andrographis Extract",
+    "priceText": "$27.99/per bottle",
+    "badgeType": "DARK",
+    "categoryId": "Immune_Support_82"
+  }
+]
