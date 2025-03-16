@@ -11,6 +11,7 @@ import {
 import { useProductFilterContext } from "@/context/ProductFilterContext";
 import { useEffect } from "react";
 import ProductCardSkeleton from "./ProductCardSkeleton";
+import { chunkData } from "@/lib/chunkData";
 
 type Props = {
   data: ProductDataType[];
@@ -25,6 +26,8 @@ const ProductSlider = ({ data }: Props) => {
     }
   }, [data.length]);
 
+  const productChunks = productData ? chunkData(productData, 8) : [];
+
   return (
     <div className="pb-[16.88rem] pt-[4.12rem]">
       {loading ? (
@@ -32,10 +35,10 @@ const ProductSlider = ({ data }: Props) => {
       ) : (
         <Carousel className="w-full">
           <CarouselContent>
-            {Array.from({ length: 5 }).map((_, index) => (
+            {productChunks?.map((chunk, index) => (
               <CarouselItem key={index}>
                 <div className="grid grid-cols-4 gap-x-[30px] gap-y-[18px]">
-                  {productData?.map((item, index) => (
+                  {chunk?.map((item, index) => (
                     <ProductCard
                       key={index}
                       img={item.img}
