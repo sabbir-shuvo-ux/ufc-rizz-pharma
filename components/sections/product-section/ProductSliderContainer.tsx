@@ -2,160 +2,44 @@ import ProductFilterContextProvider from "@/context/ProductFilterContext";
 import ButtonSlider from "./ButtonSlider";
 import ProductSlider from "./ProductSlider";
 
-const CategoriesData: CategoriesDataType[] = [
-  {
-    id: "all",
-    label: "All",
-  },
-  {
-    id: "Best_Selling_Products_02",
-    label: "Best Selling Products",
-  },
-  {
-    id: "Weight_Loss_03",
-    label: "Weight Loss",
-  },
-  {
-    id: "beauty_and_hair_loss_04",
-    label: "Beauty And Hair Loss",
-  },
-  {
-    id: "testosterone_hrt_05",
-    label: "Testosterone/HRT",
-  },
-  {
-    id: "sexual_health_06",
-    label: "Sexual Health",
-  },
-  {
-    id: "all",
-    label: "All",
-  },
-  {
-    id: "Best_Selling_Products_02",
-    label: "Best Selling Products",
-  },
-  {
-    id: "Weight_Loss_03",
-    label: "Weight Loss",
-  },
-  {
-    id: "beauty_and_hair_loss_04",
-    label: "Beauty And Hair Loss",
-  },
-  {
-    id: "testosterone_hrt_05",
-    label: "Testosterone/HRT",
-  },
-  {
-    id: "sexual_health_06",
-    label: "Sexual Health",
-  },
-  {
-    id: "all",
-    label: "All",
-  },
-  {
-    id: "Best_Selling_Products_02",
-    label: "Best Selling Products",
-  },
-  {
-    id: "Weight_Loss_03",
-    label: "Weight Loss",
-  },
-  {
-    id: "beauty_and_hair_loss_04",
-    label: "Beauty And Hair Loss",
-  },
-  {
-    id: "testosterone_hrt_05",
-    label: "Testosterone/HRT",
-  },
-  {
-    id: "sexual_health_06",
-    label: "Sexual Health",
-  },
-];
+const getData = async <T,>(url: string): Promise<T> => {
+  try {
+    const res = await fetch(`${process.env.DOMAIN}${url}`, {
+      cache: "force-cache",
+    });
 
-const productData: ProductDataType[] = [
-  {
-    id: "1",
-    img: "/Retarutide.png",
-    label: "Retarutide",
-    priceText: "$39.99/per month",
-    badgeType: "LIGHT",
-    categoryId: "Weight_Loss_03",
-  },
-  {
-    id: "2",
-    img: "/glow.png",
-    label: "Lyopholized Glow (GHK-CU/ BPC-157/TB-500)",
-    priceText: "$39.99/per month",
-    badgeType: "LIGHT",
-    categoryId: "Best_Selling_Products_02",
-  },
-  {
-    id: "3",
-    img: "/compounded-sermorelin.png",
-    label: "Compounded Sermorelin 15mg",
-    priceText: "Starting at $179 Monthly + $45 Physician consult",
-    badgeType: "DARK",
-    categoryId: "beauty_and_hair_loss_04",
-  },
-  {
-    id: "4",
-    img: "/Ipamorelin.png",
-    label: "2X CJC / Ipamorelin",
-    priceText:
-      "Starting at $149 Monthly + $45 Physician consult + $100 Lab Charge",
-    categoryId: "Best_Selling_Products_02",
-  },
-  {
-    id: "5",
-    img: "/Lyopholized-Oxytocin.png",
-    label: "Lyopholized Oxytocin",
-    priceText: "$39.99/per month",
-    categoryId: "beauty_and_hair_loss_04",
-  },
-  {
-    id: "6",
-    img: "/Finasteride.png",
-    label: "Lyopholized Finasteride 1mg",
-    priceText: "$39.99/per month",
-    badgeType: "DARK",
-    isImgBig: true,
-    categoryId: "sexual_health_06",
-  },
-  {
-    id: "7",
-    img: "/Compounded-NAD.png",
-    label: "Compounded NAD+ 1000 mg",
-    priceText: "Starting at $179 Monthly + $45 Physician consult",
-    categoryId: "Weight_Loss_03",
-  },
-  {
-    id: "8",
-    img: "/Lyopholized-PT.png",
-    label: "Lyopholized PT- 141 10mg",
-    priceText:
-      "Starting at $149 Monthly + $45 Physician consult + $100 Lab Charge",
-    badgeType: "DARK",
-    categoryId: "testosterone_hrt_05",
-  },
-];
+    if (!res.ok) {
+      throw new Error(`Failed to fetch ${url}: ${res.statusText}`);
+    }
 
-const ProductSliderContainer = () => {
-  return (
-    <ProductFilterContextProvider>
-      <div className="pt-[2.81rem]">
-        {/* product categories button slider */}
-        <ButtonSlider data={CategoriesData} />
+    return await res.json();
+  } catch (error) {
+    console.error(error);
+    return Promise.reject(error);
+  }
+};
 
-        {/* product card list slider */}
-        <ProductSlider data={productData} />
-      </div>
-    </ProductFilterContextProvider>
-  );
+const ProductSliderContainer = async () => {
+  try {
+    const [categoriesData, productData] = await Promise.all([
+      getData<CategoriesDataType[]>("/local-data/product-categories.json"),
+      getData<ProductDataType[]>("/local-data/products.json"),
+    ]);
+
+    return (
+      <ProductFilterContextProvider>
+        <div className="pt-[2.81rem]">
+          {/* Product categories button slider */}
+          <ButtonSlider data={categoriesData} />
+
+          {/* Product card list slider */}
+          <ProductSlider data={productData} />
+        </div>
+      </ProductFilterContextProvider>
+    );
+  } catch (error) {
+    return <p className="text-red-500">Failed to load product data.</p>;
+  }
 };
 
 export default ProductSliderContainer;

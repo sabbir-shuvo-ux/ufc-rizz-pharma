@@ -1,88 +1,61 @@
-import CategoryCard from "../CategoryCard";
-import SectionTitle from "../ui/SectionTitle";
+import CategoryCard from "@/components/CategoryCard";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 type CategoryDataType = {
   className?: string;
   colorCode?: string;
 } & CategoryItemType;
 
-const CategorySection = () => {
-  const data: CategoryDataType[] = [
-    {
-      id: 1,
-      img: "/portrait-fitness-people-1.png",
-      label: "Weight Loss",
-      imgOverlay: "/portrait-fitness-people-overlay.png",
-    },
-    {
-      id: 13,
-      img: "/bodybuilder-showing-his-muscles-isolated-grey.png",
-      label: "Testosterone HRT",
-      imgOverlay: "/Testosterone-overlay.png",
-      className: "from-purple-500 to-fuchsia-700",
-      colorCode: "180deg, #AD70F2 0%, #9D37A2 100%",
-    },
-    {
-      id: 11,
-      img: "/sexual-health.png",
-      label: "Sexual Health",
-      imgOverlay: "/sexual-overlay.png",
-      imgOverlayWidth: 364,
-      imgOverlayHeight: 359,
-      colorCode: "180deg, #F29B70 0%, #FBD197 100%",
-    },
-    {
-      id: 14,
-      img: "/Athletic-perfomance.png",
-      label: "Athletic Perfomance",
-      imgOverlay: "/Athletic-perfomance-overlay.png",
-      colorCode: "120.29deg, #F27070 0%, #97B5FB 82%",
-    },
-    {
-      id: 12,
-      img: "/brain-health.png",
-      label: "Brain Health",
-      imgOverlay: "/brain-health-overlay.png",
-      colorCode: "120.29deg, #97B5FB 0%, #F27070 83.5%",
-    },
+const getData = async <T,>(url: string): Promise<T> => {
+  try {
+    const res = await fetch(`${process.env.DOMAIN}${url}`, {
+      cache: "force-cache",
+    });
 
-    {
-      id: 15,
-      img: "/hair-and-beauty-man.png",
-      label: "Beauty and Hair Loss",
-      imgOverlay: "/hair-and-beauty-overlay.png",
-      colorCode: "180deg, #70CBF2 0%, #97B0FB 100%",
-    },
-  ];
+    if (!res.ok) {
+      throw new Error(`Failed to fetch ${url}: ${res.statusText}`);
+    }
 
-  return (
-    <section>
-      <div className="container">
-        {/* section title */}
-        <SectionTitle beforeText="Shop by " gradientText="Category" />
+    return res.json();
+  } catch (error) {
+    console.error(error);
+    return Promise.reject(error);
+  }
+};
 
-        {/* card container */}
-        <div className="">
+const CategorySection = async () => {
+  try {
+    const data = await getData<CategoryDataType[]>(
+      "/local-data/categories.json"
+    );
+
+    return (
+      <section>
+        <div className="container">
+          {/* Section title */}
+          <SectionTitle beforeText="Shop by " gradientText="Category" />
+
+          {/* Card container */}
           <div className="pt-[2.87rem] columns-3 gap-[30px]">
-            {data?.map((item, index) => {
-              return (
-                <CategoryCard
-                  key={item.id}
-                  img={item.img}
-                  imgOverlay={item.imgOverlay}
-                  label={item.label}
-                  isSmall={index > 0 && (index % 4 === 1 || index % 4 === 2)}
-                  imgOverlayHeight={item.imgOverlayHeight}
-                  imgOverlayWidth={item.imgOverlayWidth}
-                  colorCode={item.colorCode}
-                />
-              );
-            })}
+            {data.map((item, index) => (
+              <CategoryCard
+                key={item.id}
+                img={item.img}
+                imgOverlay={item.imgOverlay}
+                label={item.label}
+                isSmall={index % 4 === 1 || index % 4 === 2}
+                imgOverlayHeight={item.imgOverlayHeight}
+                imgOverlayWidth={item.imgOverlayWidth}
+                colorCode={item.colorCode}
+              />
+            ))}
           </div>
         </div>
-      </div>
-    </section>
-  );
+      </section>
+    );
+  } catch (error) {
+    return <p className="text-red-500">Failed to load categories.</p>;
+  }
 };
 
 export default CategorySection;
