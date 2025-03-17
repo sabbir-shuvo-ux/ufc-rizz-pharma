@@ -25,11 +25,11 @@ const Home = () => {
         <SupportSection />
       </div>
       {/* Product Section */}
-      {/* <ProductsSection /> */}
+      <ProductsSection />
       {/* Add Section */}
-      {/* <AddSection /> */}
+      <AddSection />
       {/* testimonials */}
-      {/* <ReviewSection /> */}
+      <ReviewSection />
     </>
   );
 };

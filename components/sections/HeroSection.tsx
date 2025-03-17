@@ -8,7 +8,7 @@ const HeroSection = () => {
         <SectionTitle
           beforeText="Prescription treatments for your"
           gradientText="health goals"
-          className="text-[5rem] leading-24 text-left max-[1281px]:text-[clamp(2rem,10vw,4rem)] max-[769px]:text-[clamp(2rem,10vw,3rem)] max-[769px]:max-w-[400px] max-[769px]:leading-[1.2]"
+          className="text-[5rem] leading-24 text-left max-[1281px]:text-[clamp(2rem,10vw,4rem)] max-[769px]:text-[clamp(2rem,10vw,3rem)] max-[769px]:max-w-[400px] max-[769px]:leading-[1.2] max-lg:text-[clamp(2rem,5vw,3rem)]"
           gradientClassName="block"
         />
 

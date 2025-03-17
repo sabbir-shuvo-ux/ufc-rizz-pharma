@@ -18,7 +18,7 @@ const SectionTitle = ({
   return (
     <h2
       className={cn(
-        "text-white font-impact text-5xl leading-[3.6rem] capitalize text-center",
+        "text-white font-impact text-5xl leading-[3.6rem] capitalize text-center max-lg:text-[clamp(1.8rem,5vw,2.5rem)] max-lg:leading-[1.2]",
         className
       )}
     >
