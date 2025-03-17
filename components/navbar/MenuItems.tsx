@@ -10,7 +10,11 @@ type MenuDataType = {
   isDropdown?: boolean;
 };
 
-const MenuItems = () => {
+type Props = {
+  className?: string;
+};
+
+const MenuItems = ({ className }: Props) => {
   const menuData: MenuDataType[] = [
     {
       id: "1",
@@ -42,7 +46,7 @@ const MenuItems = () => {
   ];
   return (
     <nav>
-      <ul className="flex gap-10">
+      <ul className={cn("flex gap-10", className)}>
         {menuData?.map((item, index: number) =>
           !item.isDropdown ? (
             <li key={item.id}>
@@ -51,6 +55,7 @@ const MenuItems = () => {
                 variant={"link"}
                 size={"link"}
                 className={cn(
+                  "shadow-none",
                   index === 0 &&
                     "relative before:content-[''] before:absolute before:-bottom-2 before:h-[2px] before:w-full before:bg-white before:rounded-4xl"
                 )}
@@ -60,7 +65,12 @@ const MenuItems = () => {
             </li>
           ) : (
             <li key={item.id}>
-              <Button asChild variant={"link"} size={"link"}>
+              <Button
+                asChild
+                variant={"link"}
+                size={"link"}
+                className="shadow-none"
+              >
                 <Link href={item.url}>
                   {item.label}
                   <ChevronDown />
