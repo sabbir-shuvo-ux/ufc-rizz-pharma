@@ -1,9 +1,7 @@
 import AddSection from "@/components/sections/AddSection";
-import CategorySection from "@/components/sections/CategorySection";
 import HeroSection from "@/components/sections/HeroSection";
-import ProductsSection from "@/components/sections/product-section/ProductsSection";
-import ReviewSection from "@/components/sections/testimonials-section/ReviewSection";
 import SupportSection from "@/components/sections/SupportSection";
+import ReviewSection from "@/components/sections/testimonials-section/ReviewSection";
 import SearchBox from "@/components/ui/InputBox";
 
 const Home = () => {
@@ -20,11 +18,11 @@ const Home = () => {
         </div>
       </div>
       <div className="bg-[url('/category-cover.jpg')] w-full min-h-screen h-full relative bg-no-repeat bg_size_full">
-        <CategorySection />
+        {/* <CategorySection /> */}
         <SupportSection />
       </div>
       {/* Product Section */}
-      <ProductsSection />
+      {/* <ProductsSection /> */}
       {/* Add Section */}
       <AddSection />
       {/* testimonials */}
