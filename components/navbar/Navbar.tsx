@@ -2,11 +2,11 @@
 
 import MenuItems from "@/components/navbar/MenuItems";
 import SocialLinks from "@/components/navbar/SocialLinks";
-import Image from "next/image";
-import NavbarActions from "./NavbarActions";
-import { useEffect, useLayoutEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 import MobileNavbarToggle from "./MobileNavbarToggle";
+import NavbarActions from "./NavbarActions";
 
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
