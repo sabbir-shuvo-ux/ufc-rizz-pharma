@@ -6,11 +6,11 @@ import FooterRight from "./FooterRight";
 const Footer = () => {
   return (
     <footer className="pt-[80px] bg-[#1C1C1C] bg-[linear-gradient(180deg_,_rgba(61,85,204,0.70)_0%_,_rgba(31,31,31,0.10)_100%)]">
-      <div className="container flex justify-between">
+      <div className="container flex justify-between flex-wrap">
         {/* footer left form box */}
         <FooterLeft />
 
-        <div className="mt-[40px]">
+        <div className="mt-[40px] max-lg:mx-auto">
           {/* Footer Right */}
           <FooterRight />
 

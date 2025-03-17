@@ -37,7 +37,7 @@ const ProductSlider = ({ data }: Props) => {
           <CarouselContent>
             {productChunks?.map((chunk, index) => (
               <CarouselItem key={index}>
-                <div className="grid grid-cols-4 gap-x-[30px] gap-y-[18px]">
+                <div className="grid grid-cols-4 max-xl:grid-cols-3 max-md:grid-cols-2 max-[586px]:!grid-cols-1 justify-center gap-x-[30px] gap-y-[18px]">
                   {chunk?.map((item, index) => (
                     <ProductCard
                       key={index}
@@ -53,8 +53,8 @@ const ProductSlider = ({ data }: Props) => {
             ))}
           </CarouselContent>
 
-          <CarouselPrevious className="top-auto left-[45%] -translate-x-[45%] -bottom-[124px] h-[3.75rem] w-[3.75rem] bg-[rgba(225,192,110,1)] text-[rgba(31,31,31,1)] border-none" />
-          <CarouselNext className="top-auto left-[55%] -translate-x-[55%] -bottom-[124px] h-[3.75rem] w-[3.75rem] bg-[rgba(225,192,110,1)] text-[rgba(31,31,31,1)] border-none" />
+          <CarouselPrevious className="top-auto left-[45%] -translate-x-[45%] -bottom-[124px] h-[3.75rem] w-[3.75rem] bg-[rgba(225,192,110,1)] text-[rgba(31,31,31,1)] border-none max-md:left-1/5" />
+          <CarouselNext className="top-auto left-[55%] -translate-x-[55%] -bottom-[124px] h-[3.75rem] w-[3.75rem] bg-[rgba(225,192,110,1)] text-[rgba(31,31,31,1)] border-none max-md:left-[80%]" />
         </Carousel>
       )}
     </div>

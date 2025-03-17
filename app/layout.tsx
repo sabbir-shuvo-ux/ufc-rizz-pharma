@@ -44,12 +44,12 @@ export default function RootLayout({
         className={`${neueMontreal.variable} ${neueMontrealMedium.variable} ${neueMontrealBold.variable} ${impact.variable} antialiased`}
       >
         {/* navbar */}
-        <Navbar />
+        {/* <Navbar /> */}
 
         {/* main */}
         <main>{children}</main>
 
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

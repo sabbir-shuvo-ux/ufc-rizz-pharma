@@ -9,7 +9,7 @@ type Props = Pick<
 
 const ProductCard = ({ badgeType, img, label, priceText, isImgBig }: Props) => {
   return (
-    <div className="max-w-[270px] rounded-[12px] bg-[rgba(49,65,140,0.30)] relative w-full min-h-[262px]">
+    <div className="max-w-[270px] rounded-[12px] bg-[rgba(49,65,140,0.30)] relative w-full min-h-[262px] max-[586px]:mx-auto">
       {badgeType && (
         <span
           className={cn(
@@ -24,8 +24,8 @@ const ProductCard = ({ badgeType, img, label, priceText, isImgBig }: Props) => {
 
       <div
         className={cn(
-          "flex items-center gap-6 py-5 pl-10 pr-4 overflow-hidden",
-          isImgBig && "pb-0 pt-10 pl-0"
+          "flex items-center gap-6 py-5 pl-10 pr-4 overflow-hidden max-lg:pl-4 max-lg:gap-4",
+          isImgBig && "pb-0 pt-10 pl-0 max-lg:pl-0"
         )}
       >
         <Image
@@ -37,7 +37,7 @@ const ProductCard = ({ badgeType, img, label, priceText, isImgBig }: Props) => {
           className="w-auto h-[157px]"
         />
 
-        <h4 className="text-lg font-neue-montreal-medium leading-[1.35rem] bg-gradient-to-b from-[#c1842d] to-[#ecc974] bg-clip-text text-transparent">
+        <h4 className="text-lg font-neue-montreal-medium leading-[1.35rem] bg-gradient-to-b from-[#c1842d] to-[#ecc974] bg-clip-text text-transparent max-lg:text-base">
           {label}
         </h4>
       </div>

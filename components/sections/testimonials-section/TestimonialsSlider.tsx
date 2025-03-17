@@ -81,7 +81,7 @@ const TestimonialsSlider = () => {
       </CarouselContent>
       {/* <CarouselPrevious />
       <CarouselNext /> */}
-      <CarouselDots className="mt-[50px]" />
+      <CarouselDots className="mt-[50px] max-[375px]:hidden" />
     </Carousel>
   );
 };

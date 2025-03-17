@@ -25,11 +25,11 @@ const FooterRight = () => {
   ];
 
   return (
-    <div className="flex justify-between mb-[60px]">
+    <div className="flex justify-between mb-[60px] max-[425px]:flex-col">
       <div className="">
         <h5 className="text-white text-[12px]">Quick Links</h5>
 
-        <ul className="mt-[30px] mb-[60px] flex flex-col gap-[20px]">
+        <ul className="mt-[30px] mb-[60px] max-[425px]:mb-[30px] flex flex-col gap-[20px]">
           {quickLinkData?.map((item, index) => (
             <ListItem
               key={index}
@@ -57,7 +57,7 @@ const FooterRight = () => {
           </div>
         </div>
       </div>
-      <div className="">
+      <div className="max-[425px]:mt-[30px]">
         <h5 className="text-white text-[12px]">Our Company</h5>
 
         <ul className="mt-[30px] flex flex-col gap-[20px]">
