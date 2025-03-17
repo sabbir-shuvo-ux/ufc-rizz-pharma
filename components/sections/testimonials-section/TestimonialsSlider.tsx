@@ -15,6 +15,7 @@ const TestimonialsSlider = () => {
       opts={{
         align: "center",
         startIndex: 1,
+        loop: true,
       }}
       className="w-full"
     >

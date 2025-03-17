@@ -2,11 +2,11 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 const ProductCardSkeleton = () => {
   return (
-    <div className="grid grid-cols-4 gap-x-[30px] gap-y-[18px]">
+    <div className="grid grid-cols-4 max-xl:grid-cols-3 max-md:grid-cols-2 max-[586px]:!grid-cols-1 justify-center gap-x-[30px] gap-y-[18px]">
       {Array.from({ length: 8 }).map((_, index) => (
         <Skeleton
           key={index}
-          className="max-w-[270px] rounded-[12px] bg-[rgba(49,65,140,0.50)] w-full min-h-[262px]"
+          className="max-w-[270px] rounded-[12px] bg-[rgba(49,65,140,0.50)] w-full min-h-[262px] mx-auto"
         >
           <div className="flex items-center gap-6 py-5 pl-10 pr-4 overflow-hidden">
             <Skeleton className="w-[70px] h-[157px]" />

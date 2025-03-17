@@ -27,7 +27,7 @@ const ButtonSlider = ({ data }: Props) => {
               variant={"outline"}
               size={"secondary"}
               className={cn(
-                "py-5 px-[32px]",
+                "py-5 px-[32px] max-lg:py-2.5 max-lg:px-6",
                 selectedCategory === item.id ? "bg-[#E1C06E] text-black" : null
               )}
             >
