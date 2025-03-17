@@ -64,7 +64,7 @@ const MenuItems = ({ className }: Props) => {
               </Button>
             </li>
           ) : (
-            <li key={item.id}>
+            <li className="relative group" key={item.id}>
               <Button
                 asChild
                 variant={"link"}
@@ -73,9 +73,23 @@ const MenuItems = ({ className }: Props) => {
               >
                 <Link href={item.url}>
                   {item.label}
-                  <ChevronDown />
+                  <ChevronDown className="group-hover:rotate-180 transition-all duration-300" />
                 </Link>
               </Button>
+              <ul className="absolute left-1/2 -translate-x-1/2 transition-all duration-300 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto w-[300px] bg-[#22242d] z-50 rounded-[8px] ">
+                {Array.from({ length: 4 }).map((_, subMenuIndex) => (
+                  <li key={subMenuIndex}>
+                    <Button
+                      asChild
+                      variant={"link"}
+                      size={"link"}
+                      className="shadow-none w-full py-4"
+                    >
+                      <Link href={"#"}>Weight Loss</Link>
+                    </Button>
+                  </li>
+                ))}
+              </ul>
             </li>
           )
         )}
