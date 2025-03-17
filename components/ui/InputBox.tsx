@@ -24,7 +24,7 @@ const InputBox = ({
   return (
     <div
       className={cn(
-        "w-[38.25rem] h-[4.6875rem] rounded-[6.25rem] border border-solid border-white bg-[rgba(67,67,67,0.16)] backdrop-blur-[102px] relative flex gap-[1.22rem] items-center mx-auto px-10",
+        "max-w-[38.25rem] w-full h-[4.6875rem] rounded-[6.25rem] border border-solid border-white bg-[rgba(67,67,67,0.16)] backdrop-blur-[102px] relative flex gap-[1.22rem] items-center mx-auto px-10",
         className
       )}
     >

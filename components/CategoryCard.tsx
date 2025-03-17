@@ -21,7 +21,7 @@ const CategoryCard = ({
   return (
     <div
       className={cn(
-        "relative isolate bg-gradient-to-br mb-[30px] from-red-400 to-indigo-300 rounded-3xl overflow-hidden group",
+        "relative isolate bg-gradient-to-br mb-[30px] max-md:max-w-[370px] max-md:mx-auto from-red-400 to-indigo-300 rounded-3xl overflow-hidden group",
         isSmall ? "h-[376px]" : "h-[450px]",
         className
       )}

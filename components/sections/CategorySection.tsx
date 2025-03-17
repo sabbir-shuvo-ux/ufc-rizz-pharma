@@ -36,7 +36,7 @@ const CategorySection = async () => {
           <SectionTitle beforeText="Shop by " gradientText="Category" />
 
           {/* Card container */}
-          <div className="pt-[2.87rem] columns-3 gap-[30px]">
+          <div className="pt-[2.87rem] max-md:columns-1 max-lg:columns-2 columns-3 gap-[30px]">
             {data.map((item, index) => (
               <CategoryCard
                 key={item.id}
