@@ -1,8 +1,7 @@
+import { cn } from "@/lib/utils";
+import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { ChevronDown } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { useState } from "react";
 
 type MenuDataType = {
   id: string;
@@ -16,8 +15,6 @@ type Props = {
 };
 
 const MenuItems = ({ className }: Props) => {
-  const [toggle, setToggle] = useState(false);
-
   const menuData: MenuDataType[] = [
     {
       id: "1",
