@@ -4,7 +4,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import ProductsSection from "@/components/sections/product-section/ProductsSection";
 import ReviewSection from "@/components/sections/testimonials-section/ReviewSection";
 import SupportSection from "@/components/sections/SupportSection";
-import SearchBox from "@/components/ui/SearchBox";
+import SearchBox from "@/components/ui/InputBox";
 
 const Home = () => {
   return (

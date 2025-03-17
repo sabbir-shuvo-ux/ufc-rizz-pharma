@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/components/sections/footer/Footer";
 
 // local fonts
 const neueMontreal = localFont({
@@ -47,6 +48,8 @@ export default function RootLayout({
 
         {/* main */}
         <main>{children}</main>
+
+        <Footer />
       </body>
     </html>
   );
