@@ -54,6 +54,7 @@ const CategorySection = async () => {
       </section>
     );
   } catch (error) {
+    console.log(error);
     return <p className="text-red-500">Failed to load categories.</p>;
   }
 };

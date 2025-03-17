@@ -38,6 +38,7 @@ const ProductSliderContainer = async () => {
       </ProductFilterContextProvider>
     );
   } catch (error) {
+    console.log(error);
     return <p className="text-red-500">Failed to load product data.</p>;
   }
 };

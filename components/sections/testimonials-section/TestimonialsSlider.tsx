@@ -2,8 +2,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import { CarouselDots } from "@/components/ui/CarouselDots";
 import { ratingResult } from "@/lib/ratingResult";
@@ -31,9 +29,10 @@ const TestimonialsSlider = () => {
                 alt="Inverted Comma"
               />
               <p className="text-white text-lg mb-[35px] mt-[30px]">
-                I've tried every home remedy and hair care treatment but ended
-                up with long waits and no results. Since I've started using Hims
-                my hair has grown, thickened, and darkened tremendously.
+                I&apos;ve tried every home remedy and hair care treatment but
+                ended up with long waits and no results. Since I&apos;ve started
+                using Hims my hair has grown, thickened, and darkened
+                tremendously.
               </p>
 
               <div className="flex gap-3 justify-center mb-[53px]">

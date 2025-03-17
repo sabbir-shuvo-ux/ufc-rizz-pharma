@@ -24,7 +24,7 @@ const ProductSlider = ({ data }: Props) => {
     if (data.length > 0) {
       setOriginalData(data);
     }
-  }, [data.length]);
+  }, [data, data.length, setOriginalData]);
 
   const productChunks = productData ? chunkData(productData, 8) : [];
 

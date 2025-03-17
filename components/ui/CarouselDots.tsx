@@ -1,15 +1,16 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import React from "react";
 import { Button } from "./button";
 import { useCarousel } from "./carousel";
-import { cn } from "@/lib/utils";
 
 export const CarouselDots = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const { api } = useCarousel();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [updateState, setUpdateState] = React.useState(false);
   const toggleUpdateState = React.useCallback(
     () => setUpdateState((prevState) => !prevState),

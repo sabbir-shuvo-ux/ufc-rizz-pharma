@@ -8,7 +8,7 @@ const FooterLeft = () => {
       <div className="border-2 border-solid border-[rgba(255,255,255,0.10)] rounded-[20px] flex w-full max-w-[413px] min-w-[413px] py-[35px] justify-center items-center flex-col">
         <div className="max-w-[280px]">
           <h3 className="text-white text-center text-[43px] mb-[20px]">
-            Let's Stay In Touch
+            Let&apos;s Stay In Touch
           </h3>
           <p className="text-white text-center text-base">
             Keep up to date with our latest news & special offers.

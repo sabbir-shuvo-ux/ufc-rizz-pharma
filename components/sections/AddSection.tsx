@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const AddSection = () => {
   return (
     <section className="pt-[89px] bg-[url('/BG_add.png')] w-full h-screen min-h-[812px] relative bg-no-repeat bg-cover bg-fixed">
@@ -12,7 +14,7 @@ const AddSection = () => {
         </div>
         <ul className="flex flex-col gap-[1.69rem]">
           <li className="inline-flex gap-[1.87rem]">
-            <img
+            <Image
               src="/right-direction.svg"
               alt="text indicator"
               width={18}
@@ -23,7 +25,7 @@ const AddSection = () => {
             </span>
           </li>
           <li className="inline-flex gap-[1.87rem]">
-            <img
+            <Image
               src="/right-direction.svg"
               alt="text indicator"
               width={18}
@@ -34,7 +36,7 @@ const AddSection = () => {
             </span>
           </li>
           <li className="inline-flex gap-[1.87rem]">
-            <img
+            <Image
               src="/right-direction.svg"
               alt="text indicator"
               width={18}

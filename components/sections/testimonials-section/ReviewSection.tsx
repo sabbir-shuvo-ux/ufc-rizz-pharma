@@ -6,9 +6,9 @@ const ReviewSection = () => {
     <section className="w-full min-h-screen py-[160px] h-full relative bg-[url('/testimonial-cover.jpg')] bg-no-repeat bg_size_full">
       <div className="container">
         <SectionTitle
-          afterText="Hear What "
+          beforeText="Hear What "
           gradientText="Rizz "
-          beforeText="Patients Have To Say"
+          afterText="Patients Have To Say"
           className="mb-[45px]"
         />
       </div>
