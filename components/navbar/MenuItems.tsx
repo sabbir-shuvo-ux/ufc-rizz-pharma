@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 type MenuDataType = {
   id: string;
@@ -15,6 +16,8 @@ type Props = {
 };
 
 const MenuItems = ({ className }: Props) => {
+  const [toggle, setToggle] = useState(false);
+
   const menuData: MenuDataType[] = [
     {
       id: "1",
@@ -65,18 +68,11 @@ const MenuItems = ({ className }: Props) => {
             </li>
           ) : (
             <li className="relative group" key={item.id}>
-              <Button
-                asChild
-                variant={"link"}
-                size={"link"}
-                className="shadow-none"
-              >
-                <Link href={item.url}>
-                  {item.label}
-                  <ChevronDown className="group-hover:rotate-180 transition-all duration-300" />
-                </Link>
+              <Button variant={"link"} size={"link"} className="shadow-none">
+                {item.label}
+                <ChevronDown className="group-hover:rotate-180 transition-all duration-300" />
               </Button>
-              <ul className="absolute left-1/2 -translate-x-1/2 transition-all duration-300 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto w-[300px] bg-[#22242d] z-50 rounded-[8px] ">
+              <ul className="absolute left-1/2 -translate-x-1/2 transition-all duration-300 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto w-[300px] bg-[#22242d] z-50 rounded-[8px]">
                 {Array.from({ length: 4 }).map((_, subMenuIndex) => (
                   <li key={subMenuIndex}>
                     <Button
